@@ -12,7 +12,7 @@ Death import...Many ways to die so it has it's own file. Not to clutter
 
 # One way to win
 
-# When you enter the game			Floor 55
+# When you enter the game			Floor 55			Also if you go up to F66 you can come back down and go through the process
 Your name is John and you are in the wrong place at the wrong time. Some stuff is going down and you are now in the middle of it. You over hear someone is going to steal a decent amount of bearer bonds over 600 million dollars...Who ever thought bearer bonds were a great idea...It is a stupid idea, but that is beside the point.
 
 You have to get the detonator before it is to late and you spend your life dead instead of being alive. You also have no weapons at all through this game, the only thing you can use is your fists and feet for your fighting pleasures...maybe you can find a gun somewhere. You are on the 55th floor of a 77 story building. Do you go up the stairs, down the stairs, up the elevator or down the elevator?
@@ -50,19 +50,31 @@ You found them all and you left the party guests cause your estranged wife can b
 They both don't know you have a gun and amo. So you just talk with them and they are pissed that you have the detonator...the thing that you have been carrying since the 33rd floor, THAT IS THE DETONATOR! They want it but you have other plans. What do you do fire away or fight them?
 
 
-# Fire away F0
-Run in with Karl again and a cop shoots him
+# Fire away Floor 0
+Run in with Karl again and a cop shoots him as he comes out of the building. You have the detonator and you are also outside of the building with of the bad guys dead. Congratulations you have beaten the game and maybe you and your estranged wife can get back together full time.
+
+You Win!!!
 
 
-# Second Direction
+# Second Direction Floor 
 
-# Up the stairs
-Takes you to 66
+# Up the stairs F55			Floor 66
+You are going up and up and up until you get to the 66th floor, you are tired and somewhat scared that something bad is going to happen to you at this point. You go to this big room with tons of glass walls and you basically can see everything. You see this man staring at you across the way with a big ass gun...
 
+What exactly should you do at this moment...run up the stairs, run down the stairs or try and fight him?
+
+
+# Run up the Stairs F66 		Floor 77
+You ran up the stairs and kept going until you got to the top, A man by the name of Hans Gruber is up there and he has nothing of it. He wants to kick your ass...He shoots you multiple times, and if that is not bad enough he stares at you in you death state and kicks you off the building.
+
+You Badly lose!!!! And Died Badly!!!!
 
 
 
 # Death
+
+# Try and fight F66
+Death in some way
 
 # Down the elevator F55
 Death in some way
@@ -91,11 +103,11 @@ Death in some way
 
 
 
-Floor 77
-Floor 66
+Floor 77 ~~~
+Floor 66 ~~~
 Start Floor 55 ~~~
 Floor 44 ~~~
-Floor 33
-Floor 22
-Floor 11
+Floor 33 ~~~
+Floor 22 ~~~
+Floor 11 ~~~
 Floor 0 The way out
