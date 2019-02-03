@@ -1,0 +1,101 @@
+The game layout...
+
+You will have a starting point that when you enter you will always go too.
+Each Room is a different floor 
+
+Stuck in Nakatomi Plaza
+	Start on 55th floor
+
+Death import...Many ways to die so it has it's own file. Not to clutter
+
+
+
+# One way to win
+
+# When you enter the game			Floor 55
+Your name is John and you are in the wrong place at the wrong time. Some stuff is going down and you are now in the middle of it. You over hear someone is going to steal a decent amount of bearer bonds over 600 million dollars...Who ever thought bearer bonds were a great idea...It is a stupid idea, but that is beside the point.
+
+You have to get the detonator before it is to late and you spend your life dead instead of being alive. You also have no weapons at all through this game, the only thing you can use is your fists and feet for your fighting pleasures...maybe you can find a gun somewhere. You are on the 55th floor of a 77 story building. Do you go up the stairs, down the stairs, up the elevator or down the elevator?
+
+
+# Down the stairs F55		Floor 44
+
+You are walking down the stairs and you have some weight on you so you can't walk all 55 flights of stairs. You go 11 stories and now you are on the 44th floor to take a break from all of the freaking walking you had to do. You picked the wrong floor to stop on...
+
+You just ran in to some tall, weird blonde hair guy. He looks like he has some sort of machine or pack on him and he has a gun and is ready to protect himself when he has too. You are a cop and you do have some skills in fighting. What should you do in this situation? 
+
+
+# Fight F44				Floor 33
+
+You just did what you had to do. He spotted you and he went free will of firing at you. But he was dumb and missed everything and he emptied his clip and it went to an all out brawl. He punched you right in the nose and you were bleeding fiercely...
+
+This was the breaking point for you. You went into 'Johnzilla' mode and kicked his ass, this fight went down flights of stairs, by the end of it you were on the 33rd floor. And you knocked him out and the problem was he had the thing around his neck, so it must be important, so you took it. And went to get his gun to but it is empty and pointless. You look at the device from the guys neck and the gun just in case.
+
+You look at it but it is not good, there are more guys with guns on this floor. You luck out and find amo and load up...What do you do next...keep walking or kick more ass?
+
+
+# Keep walking 			Floor 22
+
+You just kept walking, smart move on your part. You still have this thing you are carrying and you also have a gun. You walked the whole way to floor 22, which is good cause it seems like you are heading the right way...maybe.
+
+You stumble upon a party with tons of people and your estranged wife...haha. Not the point. This seems like this is a strategy floor...There are 3 grenades on the floor and you have to find them?
+
+1. Plant, 2. Bathroom, 3. Water Fountain, 4. Holly, 5. Couch, 6. Lamp, 7. Chair, 8. Desk, 9. Center Piece, 10. Theo
+
+
+# 3 Grenade found 			Floor 11
+
+You found them all and you left the party guests cause your estranged wife can be a real bitch, you left them and you kept walking. You are now to the 11th floor and you run into Karl and Hans(The leader) on this floor. What the hell is going to happen now...
+
+They both don't know you have a gun and amo. So you just talk with them and they are pissed that you have the detonator...the thing that you have been carrying since the 33rd floor, THAT IS THE DETONATOR! They want it but you have other plans. What do you do fire away or fight them?
+
+
+# Fire away F0
+Run in with Karl again and a cop shoots him
+
+
+# Second Direction
+
+# Up the stairs
+Takes you to 66
+
+
+
+
+# Death
+
+# Down the elevator F55
+Death in some way
+
+# Up the elevator F55
+Death in some way
+
+# Run F44
+Death in some way
+
+# Fight F33
+Death in some way
+
+# 2 Grenades found F22
+Death in some way
+
+# 1 Grenades found F22
+Death in some way
+
+# 0 Grenades found F22
+Death in some way
+
+# Fight F11
+Death in some way
+
+
+
+
+Floor 77
+Floor 66
+Start Floor 55 ~~~
+Floor 44 ~~~
+Floor 33
+Floor 22
+Floor 11
+Floor 0 The way out
