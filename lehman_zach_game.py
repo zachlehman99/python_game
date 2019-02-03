@@ -64,6 +64,7 @@ class Floor_66(Scene):
         elif insert == "try and fight":
             #Something to connect the death file
             return 'death'
+
         else:
             print("I have no idea what you said please say it louder or type it better?")
             return 'floor_66'
@@ -103,16 +104,93 @@ class Floor_44(Scene):
 
 
 class Floor_33(Scene):
-    pass
+
+    def enter(self):
+        print(dedent("""
+            You look at it but it is not good, there are more guys with guns on this floor. You luck out and find amo and load up...What do you do next...keep walking or kick more ass?
+            """))
+
+        insert = input('-> ')
+
+        if insert == 'keep walking':
+            print(dedent("""
+                You just kept walking, smart move on your part. You still have this thing you are carrying and you also have a gun. You walked the whole way to floor 22, which is good cause it seems like you are heading the right way...maybe.
+                """))
+            return 'floor_22'
+
+        elif insert == 'fight':
+            return 'death'
+
+        else:
+            print("I have no idea what you said please say it louder or type it better?")
+            return 'floor_33'
 
 class Floor_22(Scene):
-    pass
+
+    def enter(self):
+        print(dedent("""
+            You stumble upon a party with tons of people and your estranged wife...haha. Not the point. This seems like this is a strategy floor...There is 1 grenade on the floor and you have to find it? You have 3 guesses?
+
+            1. Plant
+            2. Bathroom
+            3. Water Fountain
+            4. Holly
+            5. Couch
+            6. Lamp
+            7. Chair
+            8. Desk
+            9. Center Piece
+            10. Theo
+            """))
+
+        pick = f"{randint(1, 9)}"
+        guess = input("Grenade Number? ")
+        guesses = 0
+
+        while guess != pick and guesses < 2:
+            print("Wrong!!!!")
+            guesses += 1
+            guess = input("Grenade Number? ")
+
+        if guess == pick:
+            print(dedent("""
+                You found it and you left the party guests cause your estranged wife can be a real bitch, you left them and you kept walking. You are now to the 11th floor and you run into Karl and Hans(The leader) on this floor. What the hell is going to happen now...
+                """))
+            return 'floor_11'
+
+        else:
+            return 'death'
 
 class Floor_11(Scene):
-    pass
+
+    def enter(self):
+        print(dedent("""
+            They both don't know you have a gun and amo. So you just talk with them and they are pissed that you have the detonator...the thing that you have been carrying since the 33rd floor, THAT IS THE DETONATOR! They want it but you have other plans. What do you do fire away or fight them?
+            """))
+
+        insert = input('-> ')
+
+        if insert == 'fire away':
+            print(dedent("""
+                Run in with Karl again and a cop shoots him as he comes out of the building. You have the detonator and you are also outside of the building with of the bad guys dead. Congratulations you have beaten the game and maybe you and your estranged wife can get back together full time.
+                """))
+            return 'exit'
+
+        elif insert == 'fight':
+            return 'death'
+
+        else:
+            print("I have no idea what you said please say it louder or type it better?")
+            return 'floor_11'
+
 
 class Floor_0(Scene):
-    pass
+
+    def enter(self):
+        print(dedent("""
+            You Win!!! You Win!!! You Win!!! You Win!!! You Win!!! You Win!!! You Win!!! You Win!!! You Win!!! You Win!!! You Win!!! You Win!!! You Win!!! You Win!!! You Win!!! You Win!!! You Win!!! You Win!!! You Win!!! You Win!!! You Win!!! You Win!!! You Win!!! You Win!!! You Win!!! You Win!!! You Win!!!
+            """))
+        return 'exit'
 
 class Engine(object):
     pass
