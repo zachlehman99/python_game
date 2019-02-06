@@ -1,6 +1,7 @@
 from textwrap import dedent
 from sys import exit
 from random import randint
+import death
 
 class Floor(object):
 
@@ -13,28 +14,32 @@ class Floor_55_Start(Floor):
         print(dedent("""
             Your name is John and you are in the wrong place at the wrong time. Some stuff is going down and you are now in the middle of it. You over hear someone is going to steal a decent amount of bearer bonds over 600 million dollars...Who ever thought bearer bonds were a great idea...It is a stupid idea, but that is beside the point.
 
-            You have to get the detonator before it is to late and you spend your life dead instead of being alive. You also have no weapons at all through this game, the only thing you can use is your fists and feet for your fighting pleasures...maybe you can find a gun somewhere. You are on the 55th floor of a 77 story building. Do you go up the stairs, down the stairs, up the elevator or down the elevator?
+            You have to get the detonator before it is to late and you spend your life dead instead of being alive. You also have no weapons at all through this game, the only thing you can use is your fists and feet for your fighting pleasures...maybe you can find a gun somewhere. You are on the 55th floor of a 77 story building. Do you
+            1. go up the stairs
+            2. down the stairs
+            3. up the elevator
+            4. down the elevator
             """))
 
         insert = input("-> ")
 
-        if insert == "down the stairs":
+        if insert == '2':
             print(dedent("""
                 You are walking down the stairs and you have some weight on you so you can't walk all 55 flights of stairs. You go 11 stories and now you are on the 44th floor to take a break from all of the freaking walking you had to do. You picked the wrong floor to stop on...
                 """))
             return 'floor_44'
 
-        elif insert == "up the stairs":
+        elif insert == '1':
             print(dedent("""
                 You are going up and up and up until you get to the 66th floor, you are tired and somewhat scared that something bad is going to happen to you at this point. You go to this big room with tons of glass walls and you basically can see everything. You see this man staring at you across the way with a big ass gun...
                 """))
             return 'floor_66'
 
-        elif insert == "down the elevator":
+        elif insert == '4':
             #Something to connect the death file
             return 'death'
 
-        elif insert == "up the elevator":
+        elif insert == '3':
             #Something to connect the death file
             return 'death'
 
@@ -47,21 +52,24 @@ class Floor_66(Floor):
 
     def enter(self):
         print(dedent("""
-            What exactly should you do at this moment...run up the stairs, run down the stairs or try and fight him?
+            What exactly should you do at this moment...
+            1. run up the stairs
+            2. run down the stairs
+            3. try and fight him?
             """))
 
         insert = input("-> ")
 
-        if insert == "run up the stairs":
+        if insert == '1':
             print(dedent("""
                 You ran up the stairs and kept going until you got to the top, A man by the name of Hans Gruber is up there and he has nothing of it. He wants to kick your ass...He shoots you multiple times, and if that is not bad enough he stares at you in you death state and kicks you off the building.
                 """))
             return 'floor_77'
 
-        elif insert == "run down the stairs":
+        elif insert == '2':
             return 'floor_55'
 
-        elif insert == "try and fight":
+        elif insert == '3':
             #Something to connect the death file
             return 'death'
 
@@ -165,7 +173,7 @@ class Floor_11(Floor):
 
     def enter(self):
         print(dedent("""
-            They both don't know you have a gun and amo. So you just talk with them and they are pissed that you have the detonator...the thing that you have been carrying since the 33rd floor, THAT IS THE DETONATOR! They want it but you have other plans. What do you do fire away or fight them?
+            They both don't know you have a gun and amo. So you just talk with them and they are pissed that you have the detonator...the thing that you have been carrying since the 33rd floor, THAT IS THE DETONATOR! They want it but you have other plans. What do you do, fire away or fight?
             """))
 
         insert = input('-> ')
@@ -188,7 +196,7 @@ class Floor_0(Floor):
 
     def enter(self):
         print(dedent("""
-            You Win!!! You Win!!! You Win!!! You Win!!! You Win!!! You Win!!! You Win!!! You Win!!! You Win!!! You Win!!! You Win!!! You Win!!! You Win!!! You Win!!! You Win!!! You Win!!! You Win!!! You Win!!! You Win!!! You Win!!! You Win!!! You Win!!! You Win!!! You Win!!! You Win!!! You Win!!! You Win!!!
+            Yippee Ki Yay Mother Fucker!!! You Win!!! Yippee Ki Yay Mother Fucker!!! You Win!!! Yippee Ki Yay Mother Fucker!!! You Win!!! Yippee Ki Yay Mother Fucker!!! You Win!!! Yippee Ki Yay Mother Fucker!!! You Win!!! Yippee Ki Yay Mother Fucker!!!
             """))
         return 'exit'
 
@@ -221,6 +229,20 @@ class Death(object):
         print(Death.ways_to_die[randint(0, len(self.ways_to_die) - 1)])
         exit(1)
 
+
+class Engine(object):
+
+    def __init__(self, scene_map):
+        self.scene_map = scene_map
+
+    def play(self):
+        current_scene = self.scene_map.opening_scene()
+        last_scene = self.scene_map.next_scene('zach')
+
+        while current_scene != last_scene:
+            next_scene_name = current_scene.enter()
+            current_scene = self.scene_map.next_scene(next_scene_name)
+
 class Map(object):
 
     scenes = {
@@ -245,18 +267,6 @@ class Map(object):
     def opening_scene(self):
         return self.next_scene(self.start_scene)
 
-class Engine(object):
-
-    def __init__(self, floor_map):
-        self.floor_map = floor_map
-
-    def play(self):
-        current_scene = self.floor_map.opening_scene()
-        last_scene = self.floor_map.next_scene('finished')
-
-        while current_scene != last_scene:
-            next_scene_name = current_scene.enter()
-            current_scene = self.floor_map.next_scene(next_scene_name)
 
 a_map = Map('floor_55')
 a_game = Engine(a_map)
