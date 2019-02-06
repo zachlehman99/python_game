@@ -1,12 +1,15 @@
 from textwrap import dedent
 from sys import exit
 from random import randint
+import random
 import death
+
 
 class Floor(object):
 
     def enter(self):
-        exit(1)
+        exit(0)
+
 
 class Floor_55_Start(Floor):
 
@@ -37,11 +40,11 @@ class Floor_55_Start(Floor):
 
         elif insert == '4':
             #Something to connect the death file
-            return 'death'
+            return death.death()
 
         elif insert == '3':
             #Something to connect the death file
-            return 'death'
+            return death.death()
 
         else:
             print("I have no idea what you said please say it louder or type it better?")
@@ -71,11 +74,12 @@ class Floor_66(Floor):
 
         elif insert == '3':
             #Something to connect the death file
-            return 'death'
+            return death.death()
 
         else:
             print("I have no idea what you said please say it louder or type it better?")
             return 'floor_66'
+
 
 class Floor_77(Floor):
 
@@ -83,13 +87,13 @@ class Floor_77(Floor):
         print(dedent("""
             You Badly lose!!!! And Died Badly!!!!
             """))
-        return 'exit'
+
 
 class Floor_44(Floor):
 
     def enter(self):
         print(dedent("""
-            You just ran in to some tall, weird blonde hair guy. He looks like he has some sort of machine or pack on him and he has a gun and is ready to protect himself when he has too. You are a cop and you do have some skills in fighting. What should you do in this situation?
+            You just ran in to some tall, weird blonde hair guy. He looks like he has some sort of machine or pack on him and he has a gun and is ready to protect himself when he has too. You are a cop and you do have some skills in fighting. What should you do in this situation, fight or run?
             """))
 
         insert = input('-> ')
@@ -104,7 +108,7 @@ class Floor_44(Floor):
 
         elif insert == 'run':
             #Something to connect the death file
-            return 'death'
+            return death.death()
 
         else:
             print("I have no idea what you said please say it louder or type it better?")
@@ -126,12 +130,13 @@ class Floor_33(Floor):
                 """))
             return 'floor_22'
 
-        elif insert == 'fight':
-            return 'death'
+        elif insert == 'kick more ass':
+            return death.death()
 
         else:
             print("I have no idea what you said please say it louder or type it better?")
             return 'floor_33'
+
 
 class Floor_22(Floor):
 
@@ -167,7 +172,8 @@ class Floor_22(Floor):
             return 'floor_11'
 
         else:
-            return 'death'
+            return death.death()
+
 
 class Floor_11(Floor):
 
@@ -185,7 +191,7 @@ class Floor_11(Floor):
             return 'floor_0'
 
         elif insert == 'fight':
-            return 'death'
+            return death.death()
 
         else:
             print("I have no idea what you said please say it louder or type it better?")
@@ -198,36 +204,6 @@ class Floor_0(Floor):
         print(dedent("""
             Yippee Ki Yay Mother Fucker!!! You Win!!! Yippee Ki Yay Mother Fucker!!! You Win!!! Yippee Ki Yay Mother Fucker!!! You Win!!! Yippee Ki Yay Mother Fucker!!! You Win!!! Yippee Ki Yay Mother Fucker!!! You Win!!! Yippee Ki Yay Mother Fucker!!!
             """))
-        return 'exit'
-
-class Death(object):
-
-    ways_to_die = [
-        "On your way you were so dumb that you had a knife in your pocket and you tripped and you bleed out so much that you have died right on the floor. You LOSE!!!😁",
-
-        "That piece of carpet came out of nowhere and you fell down breaking your ankle and prevented you from walking...Hans Gruber found you on accident and shot you to death. You LOSE!!!!👍🏻",
-
-        "You saw some donuts and had to stop because you are a cop in a different city, but they were laced with arsenic and you ate one bite and that one bite had enough to kill a hippo. So, naturally you didn't feel it until the second donut and then you just drop dead. You LOSE!!!😜",
-
-        "John, you are so dumb why did you do that...a black widow spider crawls on you and bite you. You slowly die and more and more come to bite you to laugh in you pain. You LOSE!!!✌🏽",
-
-        "Things do suck now, It is not fancy to die, but the way you just died is so fancy it is not even funny!!! Baseball bat to the head, you fought him back, he started pelting you with baseballs and whiffle balls for some reason. You try and take it like a man but he then shoots you DEAD. You LOSE!!!!!🤣",
-
-        "Your estranged wife comes behind you without you knowing and flat out kills you by pushing you off the building...That truly sucks. Good luck next time. You LOSE!!!!❤️",
-
-        "This one does suck now, you had a heart attack and dropped dead. You let everyone down and now the building blows up and now you are a true loser. You LOSE!!!!😞",
-
-        "Feel the pain of a cop mistaking you as a bad guy and he fights you and he kicks your ass. He lets you there until Hans Gruber comes and he kills you by talking to you for an hour and then shoot you. You are dead now. You LOSE!!!🤔",
-
-        "This sucks, your just a ghost now because you are already dead and you have not known it. You still lose, sorry for your inconvenience. You LOSE!!!!!!!!!👻",
-
-        "You think the game is over and celebrate to early and you just died with a staple gun to your gut and you bleed out till you die. You LOSE!!!!!👐🏻"
-
-    ]
-
-    def enter(self):
-        print(Death.ways_to_die[randint(0, len(self.ways_to_die) - 1)])
-        exit(1)
 
 
 class Engine(object):
@@ -237,11 +213,12 @@ class Engine(object):
 
     def play(self):
         current_scene = self.scene_map.opening_scene()
-        last_scene = self.scene_map.next_scene('zach')
+        last_scene = self.scene_map.next_scene('exit')
 
         while current_scene != last_scene:
             next_scene_name = current_scene.enter()
             current_scene = self.scene_map.next_scene(next_scene_name)
+
 
 class Map(object):
 
@@ -254,7 +231,6 @@ class Map(object):
         'floor_22': Floor_22(),
         'floor_11': Floor_11(),
         'floor_0': Floor_0(),
-        'death': Death(),
     }
 
     def __init__(self, start_scene):
